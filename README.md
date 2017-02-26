@@ -9,4 +9,14 @@ There are many types of automated testing for web applications, from isolated un
 TODO: add yourself here however you want to be linked to
 
 ## Resources
-[Agenda info](https://devsummitps17.schedule.esri.com/session-catalog/573829341)
+
+<!-- TODO: update w/ proceedings and slide/video links after -->
+### [Esri Developer Summit 2017](http://www.esri.com/events/devsummit)
+- [Automated Testing of Web Mapping Applications](https://devsummitps17.schedule.esri.com/session-catalog/573829341)
+- [Agenda](http://www.esri.com/events/devsummit/agenda)
+
+### Client-side Unit and Component Tests
+- [Resources from 2015/2014 DevSummit talks](https://github.com/tomwayson/esri-js-testing-tools-and-patterns)
+
+### End to End (e2e) Acceptance Tests
+- [Angular protractor tests of ArcGIS API maps ](https://github.com/Esri/angular-esri-map/tree/v1.x/test/e2e)

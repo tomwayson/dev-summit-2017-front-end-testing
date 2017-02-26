@@ -17,7 +17,7 @@ On Open Data team, everyone likes to write tests (weird, I know), but finite res
  - Unit: test a unit of code in isolation
  - Acceptance (e2e): Test drive the application by emulating user actions
  - Component: test a component in context of a page in a browser
- - NOTE: described the "ideal" for each type - totally possible to write bad unit tests that are not isolated and touch the
+ - NOTE: described the "ideal" for each type - totally possible to write bad unit tests that are not isolated and touch the entire stack
 - Not going to cover these types of tests:
  - performance (benchmark)
  - load tests
@@ -25,7 +25,8 @@ On Open Data team, everyone likes to write tests (weird, I know), but finite res
 - Avoid these overloaded terms (at least in this discussion):
  - Integration: depends on perspective
  - Functional: useless term (testing a function? does the app function?)
-- Most kinds of tests can be executed on either front or back end
+- Many kinds of tests can be _executed_ in or out of the browser
+ - for each type we'll discuss why you may want to execute in browser or not
 
 ## Client-side Unit and Component Tests (Tom)
 
@@ -34,22 +35,26 @@ On Open Data team, everyone likes to write tests (weird, I know), but finite res
  - algorithm "triangulation"
  - encourage good application architecture
 - Not so good at:
- - Only OK at preventing regressions
+ - preventing regressions (only for the unit you've tested)
  - visual (DOM) errors
-
-#### Demo
-TODO: demo unit tests only? or one demo for both (prob better)
+- generally want to run front-end unit tests in the browser, not Node
 
 ### Component Tests
 - When to write component tests
  - "fat" unit tests - DDAU
  - "mini" acceptance tests
 - Not so good:
- - ???
+ - easy to start accidentally testing your framework instead of your own code
 - examples
  - presentation component: loading spinner
  - form component: editor
  - container component: modal?
+- have to execute component tests in the browser
+
+### Unit and Component Tests for Maps
+- Don't do it. That's Esri's job.
+- In particular, JSAPI being Dojo based complicates things
+- Mock the map (and other Esri components)
 
 #### Demo
 TODO: demo
@@ -63,12 +68,17 @@ TODO: fill in, below are some ideas that I copied over outline from Ember tests 
 - Good:
  - preventing regressions
  - testing in multiple browsers
+ - testing CRUD
 - Not so good:
  - flakey
  - slow to run
 
+- Where to execute e2e tests?
+ - server is good when testing CRUD b/c have direct access to DB during setup/teardown
+ - client is good when want to run with unit tests or using framework specific helpers (angular's protractor see: https://github.com/Esri/angular-esri-map/tree/v1.x/test/e2e)
+
 ### Conclusion (Tom?)
-TODO: something along the lines of so many ways to test, finite, time and resources, so need to be smart about how and what you test. Take ideas we've presented here as starting points to discuss ways to test your own applications w/ your team.
+So many ways to test, but finite time and resources, so need to be smart about how and what you test. Take ideas we've presented here as starting points to discuss ways to test your own applications w/ your team.
 
 Questions.
 
