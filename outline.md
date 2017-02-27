@@ -4,7 +4,7 @@ Explain at a high level the different ways to automated testing of web mapping a
 # Outline
 Below is a rough rough skeleton of an outline. Please comment, modify, flesh out as you see fit.
 
-## Intro (Tom?)
+## Intro (Brooks)
 
 ### Our story
 On Open Data team, everyone likes to write tests (weird, I know), but finite resources and time, so have to be smart about what kinds of tests to write for different parts of application. We don't have this fully dialed in yet, it's a process, we want to share w/ you how we go about testing.
@@ -17,11 +17,8 @@ On Open Data team, everyone likes to write tests (weird, I know), but finite res
  - Unit: test a unit of code in isolation
  - Acceptance (e2e): Test drive the application by emulating user actions
  - Component: test a component in context of a page in a browser
- - NOTE: described the "ideal" for each type - totally possible to write bad unit tests that are not isolated and touch the entire stack
-- Not going to cover these types of tests:
- - performance (benchmark)
- - load tests
- - server-side unit tests
+ - performance (benchmark or load) tests
+- NOTE: described the "ideal" for each type - totally possible to write bad unit tests that are not isolated and touch the entire stack
 - Avoid these overloaded terms (at least in this discussion):
  - Integration: depends on perspective
  - Functional: useless term (testing a function? does the app function?)
@@ -59,7 +56,7 @@ On Open Data team, everyone likes to write tests (weird, I know), but finite res
 #### Demo
 TODO: demo
 
-## API tests? (Brooks)
+## Performance? tests (Brooks)
 TODO: fill in
 
 ## Selenium and Snapshot Tests (Jeremy)
@@ -77,7 +74,7 @@ TODO: fill in, below are some ideas that I copied over outline from Ember tests 
  - server is good when testing CRUD b/c have direct access to DB during setup/teardown
  - client is good when want to run with unit tests or using framework specific helpers (angular's protractor see: https://github.com/Esri/angular-esri-map/tree/v1.x/test/e2e)
 
-### Conclusion (Tom?)
+### Conclusion (Brooks? Tom?)
 So many ways to test, but finite time and resources, so need to be smart about how and what you test. Take ideas we've presented here as starting points to discuss ways to test your own applications w/ your team.
 
 Questions.
