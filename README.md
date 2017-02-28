@@ -5,8 +5,9 @@ This repository includes resources for the "Automated Testing of Web Mapping App
 There are many types of automated testing for web applications, from isolated unit tests of a single JavaScript function to end-to-end tests that exercise your entire stack in multiple browsers. We'll discuss the strengths and weaknesses of the main types of tests and share how we decide what kinds of tests to write. We'll give an overview of the different tools that are available for each type of test, and demonstrate the tools we use to write and automatically execute tests as part of our process for continuously delivering quality software.
 
 ## Presenters
-[@tomwayson](https://github.com/tomwayson)
-[@Brooks Robertson](https://github.com/brooksjbr)
+- [@tomwayson](https://github.com/tomwayson)
+- [@Brooks Robertson](https://github.com/brooksjbr)
+- [@Jeremy Schneider](https://github.com/ymerejredienhcs)
 TODO: add yourself here however you want to be linked to
 
 ## Resources
@@ -21,3 +22,11 @@ TODO: add yourself here however you want to be linked to
 
 ### End to End (e2e) Acceptance Tests
 - [Angular protractor tests of ArcGIS API maps ](https://github.com/Esri/angular-esri-map/tree/v1.x/test/e2e)
+
+### Selenium and Visual Testing
+
+- Official Selenium site: http://www.seleniumhq.org/
+- Dave Haeffner: http://elementalselenium.com/
+- Sauce Labs (ex: https://saucelabs.com/resources/articles/selenium-tips-css-selectors)
+- Spectre Open Source Visual testing: https://github.com/wearefriday/spectre
+- Applitools Eyes Visual testing SAAS: https://applitools.com/
