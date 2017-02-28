@@ -17,7 +17,7 @@ What, Where, When and How to test and Whom?
 	- Aligning dev and qa testing philosophies. Need for speed vs. test it all. Should always be a collaboration and negotiation to strike a healthy balance.
 	- Who writes what?
 		- Feature engineer will often use Unit tests; These live with code and are a powerful development tool to test designs; They're inexpensive, fast and isolated. Can be run locally and as often as needed.
-		- Quality engineer will often use UI tests; These can be written outside of the application being tested. Tend to be thorough, long running, and test the full application stack.
+		- Quality engineer will often use UI tests; These can be written outside of the application being tested. Tend to be thorough, long running, and test the full application stack via the browser.
 	- Value of automated tests?
 		Built-in insurance against regressions, can commit acceptance criteria to code.	
 	- Where to invest?
@@ -30,25 +30,6 @@ Automated tests vs. Test Automation?
 
 ### Our story
 On Open Data team, everyone likes to write tests (weird, I know), but finite resources and time, so have to be smart about what kinds of tests to write for different parts of application. We don't have this fully dialed in yet, it's a process, we want to share w/ you how we go about testing.
-
-### Types of front end tests
-- Define Front end tests as automated tests of:
- - part or all of a web application
- - client-side code, and optionally server-side code
-- Show testing triangle
- - Unit: test a unit of code in isolation
- - Acceptance (e2e): Test drive the application by emulating user actions
- - Component: test a component in context of a page in a browser
- - NOTE: described the "ideal" for each type - totally possible to write bad unit tests that are not isolated and touch the entire stack
-- Not going to cover these types of tests:
- - performance (benchmark)
- - load tests
- - server-side unit tests
-- Avoid these overloaded terms (at least in this discussion):
- - Integration: depends on perspective
- - Functional: useless term (testing a function? does the app function?)
-- Many kinds of tests can be _executed_ in or out of the browser
- - for each type we'll discuss why you may want to execute in browser or not
 
 ## Client-side Unit and Component Tests (Tom)
 
