@@ -8,7 +8,6 @@ There are many types of automated testing for web applications, from isolated un
 - [@tomwayson](https://github.com/tomwayson)
 - [@Brooks Robertson](https://github.com/brooksjbr)
 - [@Jeremy Schneider](https://github.com/ymerejredienhcs)
-TODO: add yourself here however you want to be linked to
 
 ## Resources
 
