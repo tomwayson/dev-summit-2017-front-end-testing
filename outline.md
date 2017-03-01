@@ -65,16 +65,58 @@ TODO: demo
 ## API tests? (Brooks)
 TODO: fill in
 
-## Selenium and Snapshot Tests (Jeremy)
-TODO: fill in, below are some ideas that I copied over outline from Ember tests brown bag talk as a starting point:
+## Selenium and Screenshot Tests (Jeremy)
 
-- Good:
- - preventing regressions
- - testing in multiple browsers
- - testing CRUD
-- Not so good:
- - flakey
- - slow to run
+Recall testing pyramid, point at where this testing falls.
+
+### Overview of Selenium and Visual Testing
+
+- A way to drive a browser.  For testers, it's a programmed "Human"ish tester, with:
+ - Hands/Fingers:
+  - Navigate to sites (type into URL bar).
+  - Type stuff in fields.
+  - Move mouse, click buttons and links.
+ - Eyes: See what happened (through a small peephole).
+ - Brain/Mouth (provided by test framework, to note and report differences)
+ - Needs to be told what precisely which DOM elements to interact with and look at, by:
+  - Element ID. example: `SEARCH_ICON = {id: 'click-to-search'}`
+  - CSS path. example: `DATASET_DOWNLOAD_FULL_SPREADSHEET={css: 'div#nav-download ul.dropdown-menu li:nth-of-type(2)'}`
+  - XPath.  example: `SELECTOR={xpath: "//input[@value='Sign in']"}
+ - API available in most languages -- Ruby, Java, etc.
+ - Typically called from a test framework such as RSpec, Cucumber, Test::Unit
+
+- Visual testing -- Perform scenarios with a web driver (Selenium) and then compare screenshots of observations to baseline screenshots.
+ - Doesn't need to know or care _how_ page is built (DOM elements).
+ - Lots of bang for your buck -- equivalent to many individual laboriously created Selenium-based assertions
+ - Needs some tuning for sensitivity -- two screenshots of the same page on same computer (even with XVFB) can be slightly different.
+ - Captures entire window -- so some differences you don't care about (say, date, carousel images) can cause false positives.
+  - Mitigations:
+   - Hide uninteresting elements before taking screenshot
+   - Pay for full featured system (ex: Applitools Eyes)
+
+- Pros:
+ - Provides testing of full-stack end-to-end.
+ - Finds regressions.
+ - Testing in multiple browsers.
+ - Testing CRUD -- sanity test of entire stack.
+ - Validates the environment/deploy
+ - Exercises the web application the same way a user does.
+
+- Cons:
+ - Slow to run -- need to be discriminating on what to decide to test
+ - Needs full environment or enough mocking.
+ - Can have flakey test results
+ - Can be fragile -- better for regression tests, _after_ application under test is relatively stable.
+ - Can be expensive to write
+ - Require maintenance -- Pro Tip: use "page object model" to abstract site functionality.
+
+#### Demo
+
+Show selenium test running
+  point out what it found
+
+Show selenium test running _with visual testing_ added
+  point out what it found (slightly shifted map -- simulating incorrect projection)
 
 - Where to execute e2e tests?
  - server is good when testing CRUD b/c have direct access to DB during setup/teardown
