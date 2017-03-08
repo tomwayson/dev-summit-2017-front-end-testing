@@ -30,6 +30,7 @@ There are many types of automated testing for web applications, from isolated un
 - Dave Haeffner: http://elementalselenium.com/
 - Sauce Labs (ex: https://saucelabs.com/resources/articles/selenium-tips-css-selectors)
 - Nice examples: https://gist.github.com/YmerejRedienhcs/28ec449f758056223076fa55d0954a72#file-selenium-cheat-sheet-md
+- Page Object model: http://elementalselenium.com/tips/7-use-a-page-object
 #### Visual Testing
 
 - Spectre Open Source visual testing: https://github.com/wearefriday/spectre
