@@ -24,8 +24,14 @@ There are many types of automated testing for web applications, from isolated un
 
 ### Selenium and Visual Testing
 
+#### Selenium
+
 - Official Selenium site: http://www.seleniumhq.org/
 - Dave Haeffner: http://elementalselenium.com/
 - Sauce Labs (ex: https://saucelabs.com/resources/articles/selenium-tips-css-selectors)
-- Spectre Open Source Visual testing: https://github.com/wearefriday/spectre
-- Applitools Eyes Visual testing SAAS: https://applitools.com/
+- Nice examples: https://gist.github.com/YmerejRedienhcs/28ec449f758056223076fa55d0954a72#file-selenium-cheat-sheet-md
+- Page Object model: http://elementalselenium.com/tips/7-use-a-page-object
+#### Visual Testing
+
+- Spectre Open Source visual testing: https://github.com/wearefriday/spectre
+- Applitools Eyes visual testing SAAS: https://applitools.com/
